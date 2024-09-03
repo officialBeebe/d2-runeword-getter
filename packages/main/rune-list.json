@@ -1,0 +1,703 @@
+{
+    "runes" : {
+        "el" : {
+            "id" : 1,
+            "created_with" : [],
+            "stats" : {
+                "weapons" : [
+                    "+50 Attack Rating",
+                    "+1 Light Radius"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "+15 Defense",
+                        "+1 Light Radius"
+                    ],
+                    "helm" : [
+                        "+15 Defense",
+                        "+1 Light Radius"
+                    ],
+                    "shield" : [
+                        "+15 Defense",
+                        "+1 Light Radius"
+                    ]
+                }
+            },
+            "character_level" : 11
+        },
+        "eld" : {
+            "id" : 2,
+            "created_with" : ["el", "el", "el"],
+            "stats" : {
+                "weapons" : [
+                        "+75% Enhanced Damage vs Undead OR 175% Damage vs Undead",
+                        "+50 Attack Rating vs Undead"
+                    ],
+                "armors" : {
+                    "armor" : [
+                        "Lowers Stamina drain by 15%"
+                    ],
+                    "helm" : [
+                        "Lowers Stamina drain by 15%"
+                    ],
+                    "shield" : [
+                        "+7% Blocking"
+                    ]
+                }
+            },
+            "character_level" : 11
+        },
+        "tir" : {
+            "id" : 3,
+            "created_with" : ["eld", "eld", "eld"],
+            "stats" : {
+                "weapons" : [
+                    "+2 Mana Per Kill"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "+2 Mana Per Kill"
+                    ],
+                    "helm" : [
+                        "+2 Mana Per Kill"
+                    ],
+                    "shield" : [
+                        "+2 Mana Per Kill"
+                    ]
+                }
+            },
+            "character_level" : 13
+        },
+        "nef" : {
+            "id" : 4,
+            "created_with" : ["tir", "tir", "tir"],
+            "stats" : {
+                "weapons" : [
+                    "Knockback"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "+30 Defense vs Missile"
+                    ],
+                    "helm" : [
+                        "+30 Defense vs Missile"
+                    ],
+                    "shield" : [
+                        "+30 Defense vs Missile"
+                    ]
+                }
+            },
+            "character_level" : 13
+        },
+        "eth" : {
+            "id" : 5,
+            "created_with" : ["nef", "nef", "nef"],
+            "stats" : {
+                "weapons" : [
+                    "-25% Target Defense"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "Regenerate Mana 15%"
+                    ],
+                    "helm" : [
+                        "Regenerate Mana 15%"
+                    ],
+                    "shield" : [
+                        "Regenerate Mana 15%"
+                    ]
+                }
+            },
+            "character_level" : 15
+        },
+        "ith" : {
+            "id" : 6,
+            "created_with" : ["eth", "eth", "eth"],
+            "stats" : {
+                "weapons" : [
+                    "+9 to Maximum Damage"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "15% Damage Taken Goes to Mana"
+                    ],
+                    "helm" : [
+                        "15% Damage Taken Goes to Mana"
+                    ],
+                    "shield" : [
+                        "15% Damage Taken Goes to Mana"
+                    ]
+                }
+            },
+            "character_level" : 15
+        },
+        "tal" : {
+            "id" : 7,
+            "created_with" : ["ith", "ith", "ith"],
+            "stats" : {
+                "weapons" : [
+                    "+75 Poison Damage Over 5 Seconds"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "+35% Poison Resist"
+                    ],
+                    "helm" : [
+                        "+35% Poison Resist"
+                    ],
+                    "shield" : [
+                        "+35% Poison Resist"
+                    ]
+                }
+            },
+            "character_level" : 17
+        },
+        "ral" : {
+            "id" : 8,
+            "created_with" : ["tal", "tal", "tal"],
+            "stats" : {
+                "weapons" : [
+                    "+5-30 Fire Damage"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "+35% Fire Resistance"
+                    ],
+                    "helm" : [
+                        "+35% Fire Resistance"
+                    ],
+                    "shield" : [
+                        "+35% Fire Resistance"
+                    ]
+                }
+            },
+            "character_level" : 19
+        },
+        "ort" : {
+            "id" : 9,
+            "created_with" : ["ral", "ral", "ral"],
+            "stats" : {
+                "weapons" : [
+                    "+1-50 Lightning Damage"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "+35% Lightning Resistance"
+                    ],
+                    "helm" : [
+                        "+35% Lightning Resistance"
+                    ],
+                    "shield" : [
+                        "+35% Lightning Resistance"
+                    ]
+                }
+            },
+            "character_level" : 21
+        },
+        "thul" : {
+            "id" : 10,
+            "created_with" : ["ort", "ort", "ort"],
+            "stats" : {
+                "weapons" : [
+                    "+3-14 Cold Damage (Cold Length 3 seconds)"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "+35% Cold Resistance"
+                    ],
+                    "helm" : [
+                        "+35% Cold Resistance"
+                    ],
+                    "shield" : [
+                        "+35% Cold Resistance"
+                    ]
+                }
+            },
+            "character_level" : 23
+        },
+        "amn" : {
+            "id" : 11,
+            "created_with" : ["thul", "thul", "thul", "chipped topaz"],
+            "stats" : {
+                "weapons" : [
+                    "7% Life Stolen Per Hit"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "Attacker takes 14 damage"
+                    ],
+                    "helm" : [
+                        "Attacker takes 14 damage"
+                    ],
+                    "shield" : [
+                        "Attacker takes 14 damage"
+                    ]
+                }
+            },
+            "character_level" : 25
+        },
+        "sol" : {
+            "id" : 12,
+            "created_with" : ["amn", "amn", "amn", "chipped amethyst"],
+            "stats" : {
+                "weapons" : [
+                    "+9 to Minimum Damage"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "-7 Damage Taken"
+                    ],
+                    "helm" : [
+                        "-7 Damage Taken"
+                    ],
+                    "shield" : [
+                        "-7 Damage Taken"
+                    ]
+                }
+            },
+            "character_level" : 27
+        },
+        "shael" : {
+            "id" : 13,
+            "created_with" : ["sol", "sol", "sol", "chipped sappphire"],
+            "stats" : {
+                "weapons" : [
+                    "20% Increased Attack Speed"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "20% Faster Hit Recovery"
+                    ],
+                    "helm" : [
+                        "20% Faster Hit Recovery"
+                    ],
+                    "shield" : [
+                        "20% Faster Block Rate"
+                    ]
+                }
+            },
+            "character_level" : 29
+        },
+        "dol" : {
+            "id" : 14,
+            "created_with" : ["shael", "shael", "shael", "flawed ruby"],
+            "stats" : {
+                "weapons" : [
+                    "Hit Causes Monster to Flee 25%"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "Replenish Life +7"
+                    ],
+                    "helm" : [
+                        "Replenish Life +7"
+                    ],
+                    "shield" : [
+                        "Replenish Life +7"
+                    ]
+                }
+            },
+            "character_level" : 31
+        },
+        "hel" : {
+            "id" : 15,
+            "created_with" : ["dol", "dol", "dol", "chipped emerald"],
+            "stats" : {
+                "weapons" : [
+                    "-20% Requirements"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "-15% Requirements"
+                    ],
+                    "helm" : [
+                        "-15% Requirements"
+                    ],
+                    "shield" : [
+                        "-15% Requirements"
+                    ]
+                }
+            },
+            "character_level" : 33
+        },
+        "io" : {
+            "id" : 16,
+            "created_with" : ["hel", "hel", "hel", "chipped diamond"],
+            "stats" : {
+                "weapons" : [
+                    "+10 Vitality"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "+10 Vitality"
+                    ],
+                    "helm" : [
+                        "+10 Vitality"
+                    ],
+                    "shield" : [
+                        "+10 Vitality"
+                    ]
+                }
+            },
+            "character_level" : 35
+        },
+        "lum" : {
+            "id" : 17,
+            "created_with" : ["io", "io", "io", "flawed topaz"],
+            "stats" : {
+                "weapons" : [
+                    "+10 Energy"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "+10 Energy"
+                    ],
+                    "helm" : [
+                        "+10 Energy"
+                    ],
+                    "shield" : [
+                        "+10 Energy"
+                    ]
+                }
+            },
+            "character_level" : 37
+        },
+        "ko" : {
+            "id" : 18,
+            "created_with" : ["lum", "lum", "lum", "flawed amethyst"],
+            "stats" : {
+                "weapons" : [
+                    "+10 Dexterity"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "+10 Dexterity"
+                    ],
+                    "helm" : [
+                        "+10 Dexterity"
+                    ],
+                    "shield" : [
+                        "+10 Dexterity"
+                    ]
+                }
+            },
+            "character_level" : 39
+        },
+        "fal" : {
+            "id" : 19,
+            "created_with" : ["ko", "ko", "ko", "flawed sapphire"],
+            "stats" : {
+                "weapons" : [
+                    "+10 Strength"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "+10 Strength"
+                    ],
+                    "helm" : [
+                        "+10 Strength"
+                    ],
+                    "shield" : [
+                        "+10 Strength"
+                    ]
+                }
+            },
+            "character_level" : 41
+        },
+        "lem" : {
+            "id" : 20,
+            "created_with" : ["fal", "fal", "fal", "flawed ruby"],
+            "stats" : {
+                "weapons" : [
+                    "75% Extra Gold From Monsters"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "50% Extra Gold From Monsters"
+                    ],
+                    "helm" : [
+                        "50% Extra Gold From Monsters"
+                    ],
+                    "shield" : [
+                        "50% Extra Gold From Monsters"
+                    ]
+                }
+            },
+            "character_level" : 43
+        },
+        "pul" : {
+            "id" : 21,
+            "created_with" : ["lem", "lem", "lem", "flawed emerald"],
+            "stats" : {
+                "weapons" : [
+                    "+75% Damage to Demons",
+                    "+100 to Attack Rating Against Demons"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "+30% Enhanced Defense"
+                    ],
+                    "helm" : [
+                        "+30% Enhanced Defense"
+                    ],
+                    "shield" : [
+                        "+30% Enhanced Defense"
+                    ]
+                }
+            },
+            "character_level" : 45
+        },
+        "um" : {
+            "id" : 22,
+            "created_with" : ["pul", "pul", "flawed diamond"],
+            "stats" : {
+                "weapons" : [
+                    "25% Chance of Open Wounds"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "+15% Resist All"
+                    ],
+                    "helm" : [
+                        "+15% Resist All"
+                    ],
+                    "shield" : [
+                        "+22% Resist All"
+                    ]
+                }
+            },
+            "character_level" : 47
+        },
+        "mal" : {
+            "id" : 23,
+            "created_with" : ["um", "um", "topaz"],
+            "stats" : {
+                "weapons" : [
+                    "Prevent Monster Heal"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "Reduce Magic Damage by 7"
+                    ],
+                    "helm" : [
+                        "Reduce Magic Damage by 7"
+                    ],
+                    "shield" : [
+                        "Reduce Magic Damage by 7"
+                    ]
+                }
+            },
+            "character_level" : 49
+        },
+        "ist" : {
+            "id" : 24,
+            "created_with" : ["mal", "mal", "amethyst"],
+            "stats" : {
+                "weapons" : [
+                    "30% Better Chance of Getting Magic Items"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "25% Better Chance of Getting Magic Items"
+                    ],
+                    "helm" : [
+                        "25% Better Chance of Getting Magic Items"
+                    ],
+                    "shield" : [
+                        "25% Better Chance of Getting Magic Items"
+                    ]
+                }
+            },
+            "character_level" : 51
+        },
+        "gul" : {
+            "id" : 25,
+            "created_with" : ["ist", "ist", "sapphire"],
+            "stats" : {
+                "weapons" : [
+                    "20% Bonus to Attack Rating"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "5% to Maximum Poison Resist"
+                    ],
+                    "helm" : [
+                        "5% to Maximum Poison Resist"
+                    ],
+                    "shield" : [
+                        "5% to Maximum Poison Resist"
+                    ]
+                }
+            },
+            "character_level" : 53
+        },
+        "vex" : {
+            "id" : 26,
+            "created_with" : ["gul", "gul", "ruby"],
+            "stats" : {
+                "weapons" : [
+                    "7% Mana Stolen Per Hit"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "+5% to Maximum Fire Resist"
+                    ],
+                    "helm" : [
+                        "+5% to Maximum Fire Resist"
+                    ],
+                    "shield" : [
+                        "+5% to Maximum Fire Resist"
+                    ]
+                }
+            },
+            "character_level" : 55
+        },
+        "ohm" : {
+            "id" : 27,
+            "created_with" : ["vex", "vex", "emerald"],
+            "stats" : {
+                "weapons" : [
+                    "+50% Damage"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "5% to Maximum Cold Resist"
+                    ],
+                    "helm" : [
+                        "5% to Maximum Cold Resist"
+                    ],
+                    "shield" : [
+                        "5% to Maximum Cold Resist"
+                    ]
+                }
+            },
+            "character_level" : 57
+        },
+        "lo" : {
+            "id" : 28,
+            "created_with" : ["ohm", "ohm", "diamond"],
+            "stats" : {
+                "weapons" : [
+                    "20% Chance of Deadly Strike"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "+5 to Maximum Lightning Resist"
+                    ],
+                    "helm" : [
+                        "+5 to Maximum Lightning Resist"
+                    ],
+                    "shield" : [
+                        "+5 to Maximum Lightning Resist"
+                    ]
+                }
+            },
+            "character_level" : 59
+        },
+        "sur" : {
+            "id" : 29,
+            "created_with" : ["lo", "lo", "flawless topaz"],
+            "stats" : {
+                "weapons" : [
+                    "+20% Chance of Hit Blinds Target"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "+5% Total Mana"
+                    ],
+                    "helm" : [
+                        "+5% Total Mana"
+                    ],
+                    "shield" : [
+                        "+50 Mana"
+                    ]
+                }
+            },
+            "character_level" : 61
+        },
+        "ber" : {
+            "id" : 30,
+            "created_with" : ["sur", "sur", "flawless amethyst"],
+            "stats" : {
+                "weapons" : [
+                    "20% Chance of Crushing Blow"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "Damage Reduced by 8%"
+                    ],
+                    "helm" : [
+                        "Damage Reduced by 8%"
+                    ],
+                    "shield" : [
+                        "Damage Reduced by 8%"
+                    ]
+                }
+            },
+            "character_level" : 63
+        },
+        "jah" : {
+            "id" : 31,
+            "created_with" : ["ber", "ber", "flawless sapphire"],
+            "stats" : {
+                "weapons" : [
+                    "Ignore Target's Defense"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "+5% Total Hit Points"
+                    ],
+                    "helm" : [
+                        "+5% Total Hit Points"
+                    ],
+                    "shield" : [
+                        "+50 Hit Points"
+                    ]
+                }
+            },
+            "character_level" : 65
+        },
+        "cham" : {
+            "id" : 32,
+            "created_with" : ["jah", "jah", "flawless ruby"],
+            "stats" : {
+                "weapons" : [
+                    "+32% Chance of Hit Freezing Target for 3 Seconds"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "Cannot Be Frozen"
+                    ],
+                    "helm" : [
+                        "Cannot Be Frozen"
+                    ],
+                    "shield" : [
+                        "Cannot Be Frozen"
+                    ]
+                }
+            },
+            "character_level" : 67
+        },
+        "zod" : {
+            "id" : 33,
+            "created_with" : ["cham", "cham", "flawless emerald"],
+            "stats" : {
+                "weapons" : [
+                    "Indestructible"
+                ],
+                "armors" : {
+                    "armor" : [
+                        "Indestructible"
+                    ],
+                    "helm" : [
+                        "Indestructible"
+                    ],
+                    "shield" : [
+                        "Indestructible"
+                    ]
+                }
+            },
+            "character_level" : 69
+        }
+    }
+}

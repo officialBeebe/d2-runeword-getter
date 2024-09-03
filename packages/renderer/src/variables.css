@@ -1,0 +1,35 @@
+:root {
+  /* Colors inspired by Diablo II */
+  --primary-color: #DAA520; /* Golden Rod */
+  --secondary-color: hsl(25, 76%, 31%); /* Saddle Brown */
+  --accent-color: #FFD700; /* Gold */
+  --background-color: #2C2C2C; /* Dark Background */
+  --border-color: #9d6203; /* Indigo */
+  --text-color: #FFFFFF; /* White */
+  --muted-text-color: #B0C4DE; /* Light Steel Blue */
+  --danger-color: #B22222; /* Firebrick */
+
+  /* Font sizes */
+  --font-size-huge: 24px;
+  --font-size-large: 20px;
+  --font-size-medium: 16px;
+  --font-size-small: 12px;
+  --font-size-micro: 8px;
+
+  /* Padding and margins */
+  --padding-micro: 2px;
+  --padding-small: 4px;
+  --padding-medium: 8px;
+  --padding-large: 16px;
+  --margin-micro: 2px;
+  --margin-small: 4px;
+  --margin-medium: 8px;
+  --margin-large: 16px;
+
+  /* Borders */
+  --border-width: 2px;
+  --border-radius: 4px;
+
+  /* Box shadows */
+  --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}

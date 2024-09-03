@@ -1,0 +1,44 @@
+{
+    "characters" : {
+        "Loken" : {
+            "class" : "Paladin",
+            "level" : 44,
+            "runes" : {
+                "El" : 3,
+                "Eld" : 3,
+                "Tir" : 2,
+                "Nef" : 1,
+                "Eth" : 0,
+                "Ith" : 0,
+                "Tal" : 0,
+                "Ral" : 0,
+                "Ort" : 0,
+                "Thul" : 2,
+                "Amn" : 3,
+                "Sol" : 0,
+                "Shael" : 0,
+                "Dol" : 0,
+                "Hel" : 0,
+                "Io" : 1,
+                "Lum" : 2,
+                "Ko" : 2,
+                "Fal" : 1,
+                "Lem" : 0,
+                "Pul" : 0,
+                "Um" : 2,
+                "Mal" : 0,
+                "Ist" : 0,
+                "Gul" : 0,
+                "Vex" : 0,
+                "Ohm" : 0,
+                "Lo" : 0,
+                "Sur" : 0,
+                "Ber" : 0,
+                "Jah" : 0,
+                "Cham" : 0,
+                "Zod" : 0
+    
+            }
+        }
+    }
+}

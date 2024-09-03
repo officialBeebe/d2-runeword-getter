@@ -1,8 +1,13 @@
-import {app} from 'electron';
+import {app, ipcMain} from 'electron';
 import './security-restrictions';
 import {restoreOrCreateWindow} from '/@/mainWindow.js';
 import {platform} from 'node:process';
-import updater from 'electron-updater';
+import {autoUpdater} from 'electron-updater'; // Corrected import
+import getRunewordMatches from './runeApi.js';
+
+// Resolve the paths to your JSON files using import
+import runeList from '../rune-list.json';
+import runeWords from '../rune-words.json';
 
 /**
  * Prevent electron from running multiple instances.
@@ -20,7 +25,7 @@ app.on('second-instance', restoreOrCreateWindow);
 app.disableHardwareAcceleration();
 
 /**
- * Shout down background process if all windows was closed
+ * Shut down background process if all windows were closed
  */
 app.on('window-all-closed', () => {
   if (platform !== 'darwin') {
@@ -38,43 +43,60 @@ app.on('activate', restoreOrCreateWindow);
  */
 app
   .whenReady()
-  .then(restoreOrCreateWindow)
-  .catch(e => console.error('Failed create window:', e));
+  .then(() => {
+    restoreOrCreateWindow();
+
+    // IPC Handlers
+    ipcMain.handle('ping', () => 'pong');
+
+    ipcMain.handle('get-rune-word-matches', async (event, runes) => {
+      const matches = getRunewordMatches(runes, runeWords);
+      return matches; // Returns an array of rune word objects
+    });
+
+    ipcMain.handle('get-rune-list', async () => {
+      return runeList; // Returns the whole rune-list.json object
+    });
+
+    // ipcMain.handle('get-characters', async () => {
+    //   const characters = await import(resolve('../../src/main/characters.json')).characters;
+    //   return Object.keys(characters); // Returns an array of character names
+    // });
+
+    // ipcMain.handle('get-character', async (event, characterName) => {
+    //   const characters = await import(resolve('../../src/main/characters.json')).characters;
+    //   return characters[characterName]; // Returns the character object
+    // });
+  })
+  .catch(e => console.error('Failed to create window:', e));
 
 /**
  * Install Vue.js or any other extension in development mode only.
- * Note: You must install `electron-devtools-installer` manually
  */
 // if (import.meta.env.DEV) {
 //   app
 //     .whenReady()
 //     .then(() => import('electron-devtools-installer'))
 //     .then(module => {
-//       const {default: installExtension, VUEJS_DEVTOOLS} =
+//       const {default: installExtension, REACT_DEVELOPER_TOOLS} =
 //         //@ts-expect-error Hotfix for https://github.com/cawa-93/vite-electron-builder/issues/915
 //         typeof module.default === 'function' ? module : (module.default as typeof module);
 //
-//       return installExtension(VUEJS_DEVTOOLS, {
+//       return installExtension(REACT_DEVELOPER_TOOLS, {
 //         loadExtensionOptions: {
 //           allowFileAccess: true,
 //         },
 //       });
 //     })
-//     .catch(e => console.error('Failed install extension:', e));
+//     .catch(e => console.error('Failed to install extension:', e));
 // }
 
 /**
  * Check for app updates, install it in background and notify user that new version was installed.
- * No reason run this in non-production build.
- * @see https://www.electron.build/auto-update.html#quick-setup-guide
- *
- * Note: It may throw "ENOENT: no such file app-update.yml"
- * if you compile production app without publishing it to distribution server.
- * Like `npm run compile` does. It's ok 😅
  */
 if (import.meta.env.PROD) {
   app
     .whenReady()
-    .then(() => updater.autoUpdater.checkForUpdatesAndNotify())
-    .catch(e => console.error('Failed check and install updates:', e));
+    .then(() => autoUpdater.checkForUpdatesAndNotify())
+    .catch(e => console.error('Failed to check and install updates:', e));
 }

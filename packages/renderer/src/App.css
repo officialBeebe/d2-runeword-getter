@@ -1,0 +1,200 @@
+@import './variables.css';
+
+.main-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+	height: 100vh; /* Full height of the viewport */
+	overflow: hidden; /* Prevent page scrolling */
+	padding: 15px 35px;
+}
+
+@media (max-width: 768px) {
+	.main-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto;
+		padding: 10px 20px;
+		height: 100vh; /* Full height of the viewport */
+		overflow: hidden; /* Prevent page scrolling */
+	}
+}
+
+/* Rune List Container */
+.rune-list-container {
+	grid-column-start: 1;
+	height: full; /* Adjust as needed */
+	overflow: auto;
+}
+
+@media (max-width: 768px) {
+	.rune-list-container {
+		width: 100%; /* Full width in flex layout */
+		height: auto; /* Adjust as needed */
+		overflow: auto;
+	}
+}
+
+/* Runes */
+.rune-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 8px 4px;
+	border: 1px solid var(--secondary-color);
+	background-color: rgba(0, 0, 0, 0.4);
+	height: 75px;
+	width: 55px;
+}
+
+/* Base hover effect for the rune-container element */
+.rune-container:hover {
+    background-color: var(--secondary-color);
+    cursor: pointer;
+	border: 1px solid rgba(0, 0, 0, 0.65);
+}
+
+/* Nested hover effects for specific child elements */
+.rune-container:hover .rune-title {
+    color: var(--accent-color);
+}
+
+.rune-container:hover .rune-counter.active {
+    color: var(--accent-color);
+}
+
+.rune-container:hover .rune-counter.inactive {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+.rune-title {
+	font-size: 1rem;
+	color: var(--primary-color);
+}
+
+.rune-image {
+	height: 50%;
+}
+
+.rune-counter {
+	font-size: 0.8rem;
+}
+
+.active {
+	color: var(--accent-color);
+}
+
+.inactive {
+	color: var(--secondary-color);
+}
+
+/* Rune Words Container */
+.rune-words-container {
+	position: relative;
+	grid-column-start: 2;
+	height: full; /* Adjust as needed */
+	overflow: auto;
+}
+
+@media (max-width: 768px) {
+	.rune-words-container {
+		width: 100%; /* Full width in flex layout */
+		height: 40%; /* Adjust as needed */
+		overflow: auto;
+	}
+}
+
+/* Rune Word */
+.rune-word {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 8px 12px;
+	border: 1px solid var(--secondary-color);
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Base hover effect for the rune-word element */
+.rune-word:hover {
+    background-color: var(--secondary-color);
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.65);
+}
+
+/* Nested hover effects for specific child elements */
+.rune-word:hover .rune-word-title,
+.rune-word:hover .rune-word-stats-list *,
+.rune-word:hover .rune-word-character-level-label {
+    color: var(--accent-color);
+}
+
+.rune-word:hover .rune-word-requirements,
+.rune-word:hover .rune-word-character-level-container .rune-word-character-level {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.rune-word:hover .rune-word,
+.rune-word:hover .rune-word-character-level-container {
+    border: 1px solid rgba(0, 0, 0, 0.65);
+}
+
+
+.rune-word-title {
+	font-size: 1.2rem;
+	color: var(--primary-color);
+	margin-bottom: var(--margin-medium);
+}
+
+.rune-word-requirements {
+	font-size: 1rem;
+	color: var(--secondary-color);
+	margin-bottom: var(--margin-small);
+}
+
+.rune-word-stats-list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 8px 12px;
+}
+
+.rune-word-stat {
+	font-size: 0.8rem;
+	color: var(--primary-color);
+	margin-bottom: var(--margin-small);
+}
+
+.rune-word-character-level-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 4px 8px;
+	margin: var(--margin-medium);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 1px solid var(--secondary-color);
+	background-color: rgba(0, 0, 0, 0.15);
+}
+
+.rune-word-character-level-label {
+	font-size: 0.8rem;
+	color: var(--primary-color);
+}
+
+.rune-word-character-level {
+	font-size: 1rem;
+	color: var(--secondary-color);
+}
+
+.parentheses::before {
+	content: '(';
+}
+
+.parentheses::after {
+	content: ')';
+}

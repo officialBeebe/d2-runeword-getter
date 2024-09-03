@@ -12,7 +12,9 @@
     "baseUrl": ".",
     "paths": {
       "/@/*": ["./src/*"]
-    }
+    },
+    "resolveJsonModule": true, // Enable JSON imports
+    "allowJs": true,
   },
   "include": ["src/**/*.ts", "../../types/**/*.d.ts"],
   "exclude": ["**/*.spec.ts", "**/*.test.ts"]
