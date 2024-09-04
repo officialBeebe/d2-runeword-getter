@@ -10,21 +10,17 @@ function App() {
   const [runewordMatches, setRunewordMatches] = useState<IRuneWord[]>([]);
   const [runeList, setRuneList] = useState<string[]>([]);
 
-  useEffect(() => {
-    const fetchMatches = async () => {
+  const fetchMatches = async () => {
       let runeNames: string[] = runes.map(rune => rune.name);
-      const runewordResponses: IRuneWord[] = await window.runeApi.getRuneWordMatches(
-        runeNames,
-      );
+      const runewordResponses: IRuneWord[] = await window.runeApi.getRuneWordMatches(runeNames);
 
-      let _runewordMatches = runewordResponses
-      console.log("Matches: ",_runewordMatches);
+      let _runewordMatches = runewordResponses;
+      console.log('Matches: ', _runewordMatches);
       setRunewordMatches(_runewordMatches);
     };
 
-    if (runes.length > 0) {
+  useEffect(() => {
       fetchMatches();
-    }
   }, [runes]);
 
   useEffect(() => {
@@ -52,13 +48,36 @@ function App() {
     setRunes([...runes, selectedRune]);
   };
 
-  const handleRemoveRune = (runeName: string) => {
-    let i = runes.findIndex(rune => rune.name === runeName);
+  const handleRemoveRune = (rune: string) => {
+    console.log('Removing rune:', rune);
+
+    let newRunes = [...runes];
+
+    let i = newRunes.findIndex(r => r.name.toLowerCase() === rune.toLowerCase());
+
     if (i > -1) {
-      let newRunes = [...runes];
       newRunes.splice(i, 1);
-      setRunes(newRunes);
     }
+
+    setRunes(newRunes);
+  };
+
+  const handleBuild = (runeword: IRuneWord) => {
+    console.log('Building runeword:', runeword);
+
+    let newRunes = [...runes];
+
+    for (let rune of runeword.properties.runes) {
+      console.log('Removing rune:', rune);
+
+      let i = newRunes.findIndex(r => r.name.toLowerCase() === rune.toLowerCase());
+
+      if (i > -1) {
+        newRunes.splice(i, 1);
+      }
+    }
+
+    setRunes(newRunes);
   };
 
   return (
@@ -73,7 +92,10 @@ function App() {
             handleAddRune={handleAddRune}
             handleRemoveRune={handleRemoveRune}
           />
-          <RuneWordsContainer matches={runewordMatches} />
+          <RuneWordsContainer
+            matches={runewordMatches}
+            handleBuild={handleBuild}
+          />
         </div>
       )}
     </div>
