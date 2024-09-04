@@ -1,7 +1,6 @@
 import globals from 'globals';
 import js from '@eslint/js';
 import typescriptLint from 'typescript-eslint';
-import pluginVue from 'eslint-plugin-vue';
 import eslintConfigPrettier from 'eslint-config-prettier';
 
 export default [
@@ -10,7 +9,6 @@ export default [
   },
   js.configs.recommended,
   ...typescriptLint.configs.recommended,
-  ...pluginVue.configs['flat/strongly-recommended'],
   // Disable a set of rules that may conflict with prettier
   // You can safely remove this if you don't use prettier
   eslintConfigPrettier,
