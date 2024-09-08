@@ -21,7 +21,7 @@ const Rune: React.FC<RuneProps> = ({rune, count, handleAddRune, handleRemoveRune
   useEffect(() => {
     try {
       // Assuming your images are served correctly from the public directory
-      const imagePath = `../assets/sprites/${rune}_rune.png`;
+      const imagePath = `/assets/sprites/${rune}_rune.png`;
       setRuneImage(imagePath);
     } catch (error) {
       console.error(error);
