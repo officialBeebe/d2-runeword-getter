@@ -2,7 +2,7 @@ import {app, ipcMain} from 'electron';
 import './security-restrictions';
 import {restoreOrCreateWindow} from '/@/mainWindow.js';
 import {platform} from 'node:process';
-import {autoUpdater} from 'electron-updater'; // Corrected import
+// import {autoUpdater} from 'electron-updater'; // Corrected import
 import getRunewordMatches from './runeApi.js';
 
 // Resolve the paths to your JSON files using import
@@ -97,6 +97,6 @@ app
 if (import.meta.env.PROD) {
   app
     .whenReady()
-    .then(() => autoUpdater.checkForUpdatesAndNotify())
+    // .then(() => autoUpdater.checkForUpdatesAndNotify())
     .catch(e => console.error('Failed to check and install updates:', e));
 }
